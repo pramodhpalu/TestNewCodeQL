@@ -13,6 +13,7 @@
 		A55FFF8D2B052D5D00F05D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55FFF8B2B052D5D00F05D6F /* Main.storyboard */; };
 		A55FFF8F2B052D6000F05D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55FFF8E2B052D6000F05D6F /* Assets.xcassets */; };
 		A55FFF922B052D6000F05D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55FFF902B052D6000F05D6F /* LaunchScreen.storyboard */; };
+		A55FFF9E2B05F54300F05D6F /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = A55FFF9D2B05F54300F05D6F /* SVProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55FFF9E2B05F54300F05D6F /* SVProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = SampleApp;
+			packageProductDependencies = (
+				A55FFF9D2B05F54300F05D6F /* SVProgressHUD */,
+			);
 			productName = SampleApp;
 			productReference = A55FFF822B052D5D00F05D6F /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = A55FFF792B052D5D00F05D6F;
+			packageReferences = (
+				A55FFF9C2B05F54300F05D6F /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = A55FFF832B052D5D00F05D6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A55FFF9C2B05F54300F05D6F /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A55FFF9D2B05F54300F05D6F /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A55FFF9C2B05F54300F05D6F /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A55FFF7A2B052D5D00F05D6F /* Project object */;
 }
