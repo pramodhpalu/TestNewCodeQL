@@ -21,19 +21,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install Xcode Command-Line Tools
-        run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
           languages: swift
-
-      - name: Build Project
-        run: |
-          cd SampleApp
-          xcodebuild -resolvePackageDependencies -scheme SampleApp
-          xcodebuild -scheme SampleApp build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
