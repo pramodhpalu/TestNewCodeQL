@@ -76,6 +76,11 @@ jobs:
     #     echo "Run, Build Application using script"
     #     ./location_of_script_within_repo/buildscript.sh
 
+    - name: Build iOS project with Swift Package Manager
+        run: |
+          xcodebuild -resolvePackageDependencies -scheme SampleApp -workspace SampleApp.xcworkspace
+          xcodebuild -scheme SampleApp -workspace SampleApp.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 12' build
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
