@@ -77,7 +77,8 @@ jobs:
     #     ./location_of_script_within_repo/buildscript.sh
 
     - name: Change to project directory
-        run: cd SampleApp
+        run: |
+         cd SampleApp
 
     - name: Build iOS project with Swift Package Manager
         run: | 
