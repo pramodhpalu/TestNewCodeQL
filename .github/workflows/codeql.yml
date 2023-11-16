@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Project
         run: |
-          cd TestNewCodeQL/SampleApp
+          cd SampleApp
           xcodebuild -resolvePackageDependencies -scheme SampleApp
           xcodebuild -scheme SampleApp build
 
