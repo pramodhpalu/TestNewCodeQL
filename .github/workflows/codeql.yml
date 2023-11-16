@@ -11,7 +11,7 @@ on:
 jobs:
   analyze:
     name: Analyze Swift Code
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     permissions:
       actions: read
       contents: read
@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+
+      - name: Install Xcode Command-Line Tools
+        run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
