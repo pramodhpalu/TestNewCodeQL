@@ -29,5 +29,5 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:
-          working-directory: TestNewCodeQL/SampleApp
+          working-directory: SampleApp
           category: "/language:swift"
