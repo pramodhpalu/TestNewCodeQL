@@ -76,6 +76,9 @@ jobs:
     #     echo "Run, Build Application using script"
     #     ./location_of_script_within_repo/buildscript.sh
 
+    - name: Change to project directory
+        run: cd SampleApp
+
     - name: Build iOS project with Swift Package Manager
         run: | 
           xcodebuild -resolvePackageDependencies -scheme SampleApp -workspace SampleApp.xcworkspace
