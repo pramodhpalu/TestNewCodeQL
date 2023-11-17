@@ -69,10 +69,9 @@ jobs:
     - name: Build iOS project with Swift Package Manager
       run: | 
           cd SampleApp
-          xcodebuild -resolvePackageDependencies -scheme SampleApp 
-          xcodebuild -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone 13' build
-          xcodebuild -resolvePackageDependencies -scheme YourScheme -configuration YourConfiguration OTHER_SWIFT_FLAGS="-Xfrontend -disable-docc-sandbox"
-          xcodebuild -scheme YourScheme -configuration YourConfiguration build OTHER_SWIFT_FLAGS="-Xfrontend -disable-docc-sandbox"
+          xcodebuild -resolvePackageDependencies -scheme SampleApp OTHER_SWIFT_FLAGS="-Xfrontend -disable-docc-sandbox"
+          xcodebuild -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone 13' build OTHER_SWIFT_FLAGS="-Xfrontend -disable-docc-sandbox"
+
 
 
 
