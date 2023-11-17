@@ -41,6 +41,10 @@ jobs:
              
     - name: Checkout repository
       uses: actions/checkout@v3
+
+    - name: Remove .docc folder
+      run: |
+          rm -rf .docc
       
     - name: Install Xcode command-line tools
       run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
