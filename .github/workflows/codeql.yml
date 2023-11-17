@@ -70,7 +70,7 @@ jobs:
       run: | 
           cd SampleApp
           xcodebuild -resolvePackageDependencies -scheme SampleApp 
-          xcodebuild -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone SE' build
+          xcodebuild -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone 13' build
 
 
     - name: Perform CodeQL Analysis
