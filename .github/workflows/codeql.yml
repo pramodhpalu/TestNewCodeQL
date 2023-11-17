@@ -66,6 +66,7 @@ jobs:
 
     - name: Build
       run: |
+        cd SampleApp
         xcodebuild clean build \
         -target "SampleApp" \
         -scheme "SampleApp" \
