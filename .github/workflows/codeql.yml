@@ -79,8 +79,7 @@ jobs:
       run: | 
           cd SampleApp
           swift package resolve
-          # xcodebuild -resolvePackageDependencies -scheme SampleApp
-          # xcodebuild -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone 15' build
+          xcodebuild -resolvePackageDependencies
           xcodebuild -workspace SampleApp.xcworkspace -scheme SampleApp -destination 'platform=iOS Simulator,name=iPhone 15' build
 
 
