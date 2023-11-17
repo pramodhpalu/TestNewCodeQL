@@ -37,6 +37,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      
+    - name: Set up Xcode
+      uses: actions/setup-xcode@v2
+      with:
+          xcode-version: '14.3' # Replace with your Xcode version
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
