@@ -63,6 +63,10 @@ jobs:
 
     # - name: Select XCode version
     #   run: sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+
+    - name: Determine Xcode Version
+      run: |
+          echo "XCODE_VERSION=$(xcodebuild -version | grep 'Xcode' | cut -d ' ' -f 2)" >> $GITHUB_ENV
     
     - name: Select Xcode
       run: sudo xcode-select -s /Applications/Xcode_$(<.xcode-version).app/Contents/Developer
