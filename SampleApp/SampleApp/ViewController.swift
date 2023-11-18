@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.executeQuery(input: "dfsa")
+        loadURL(input: "889")
     }
     
     func executeQuery(input: String) {
@@ -21,7 +22,15 @@ class ViewController: UIViewController {
         // Execute the query...
     }
 
-
+    func loadURL(input: String) {
+        if let url = URL(string: input) {
+            // Load the URL...
+            let request = URLRequest(url: url)
+            // Perform further operations...
+        } else {
+            // Handle invalid URL input...
+        }
+    }
 
 }
 
